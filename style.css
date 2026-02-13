@@ -1,0 +1,42 @@
+body {
+    background-color: #0b0d17; /* Deep space blue/black */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+img, iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Cyan glow */
+}
+
+h1 {
+    color: #00d2ff; /* Cyan accent */
+    margin-bottom: 5px;
+}
+
+#apod-date {
+    color: #aaa;
+    font-style: italic;
+    margin-top: 0;
+}
+
+#apod-explanation {
+    line-height: 1.6;
+    text-align: justify;
+}
