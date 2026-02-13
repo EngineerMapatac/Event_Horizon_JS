@@ -105,5 +105,25 @@ function showSection(sectionId) {
     }
 }
 
+// 6. Random Date Generator
+function fetchRandomAPOD() {
+    // NASA APOD started on June 16, 1995
+    const startDate = new Date('1995-06-16').getTime();
+    const today = new Date().getTime();
+
+    // Generate a random time between start and today
+    const randomTime = startDate + Math.random() * (today - startDate);
+    
+    // Convert timestamp back to YYYY-MM-DD format
+    const randomDate = new Date(randomTime);
+    const dateString = randomDate.toISOString().split('T')[0];
+
+    // Update the date picker input so the user sees which date was picked
+    document.getElementById('date-picker').value = dateString;
+
+    // Fetch the data
+    fetchAPOD(dateString);
+}
+
 // Initial Load (Loads today's picture)
 fetchAPOD();
