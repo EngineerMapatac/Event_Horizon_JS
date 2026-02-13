@@ -21,6 +21,30 @@
         </div>
     </div>
 
+    <div class="date-controls">
+        <input type="date" id="date-picker">
+        <button onclick="fetchAPODByDate()">Search</button>
+        <button onclick="fetchRandomAPOD()">Surprise Me 🎲</button>
+
+        <div class="date-controls">
+            <input type="date" id="date-picker">
+            <button onclick="fetchAPODByDate()">Search</button>
+            <button onclick="fetchRandomAPOD()">Surprise Me 🎲</button>
+        </div>
+    </div>
+
+    <div id="apod-section">
+        <h1>Astronomy Picture of the Day</h1>
+
+        <div class="date-controls">
+            <input type="date" id="date-picker">
+            <button onclick="fetchAPODByDate()">Search</button>
+    </div>
+        <h2 id="apod-title">Loading...</h2>
+        <p id="apod-date"></p>
+        <div id="media-wrapper"></div>
+        <p id="apod-explanation"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

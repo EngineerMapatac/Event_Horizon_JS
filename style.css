@@ -40,3 +40,26 @@ h1 {
     line-height: 1.6;
     text-align: justify;
 }
+/* Date Picker Styling */
+.date-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="date"] {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00d2ff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: inherit;
+    outline: none;
+}
+
+/* Fix calendar icon color in Chrome/Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
