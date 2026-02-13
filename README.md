@@ -2,7 +2,7 @@
 
 **Cosmos Dashboard** is a responsive web application that visualizes real-time data from the NASA Open APIs. It serves as an interactive window into space, featuring a daily astronomy picture, a time-traveling archive, and a gallery of images directly from the surface of Mars.
 
-[**🔴 LIVE DEMO**](https://Event_Horizon_JS.github.io/Event_Horizon_JS/)
+[**🔴 LIVE DEMO**](https://engineermapatac.github.io/Event_Horizon_JS)
 *(Replace "YOUR_USERNAME" with your actual GitHub username)*
 
 ---
