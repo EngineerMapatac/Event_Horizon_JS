@@ -1,6 +1,7 @@
+/* --- 1. Global Setup (Space Theme) --- */
 body {
-    background-color: #0b0d17; /* Deep space blue/black */
-    color: #ffffff;
+    background-color: #0b0d17; /* Deep Space Blue */
+    color: #ffffff; /* White Text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -9,25 +10,44 @@ body {
     margin: 0;
 }
 
+/* --- 2. Main Container (Glassmorphism) --- */
 .container {
+    width: 90%;
     max-width: 800px;
-    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1); /* See-through glass effect */
+    backdrop-filter: blur(10px); /* Blurs the background behind it */
     padding: 2rem;
     border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
+    margin: 20px 0;
+}
+
+/* --- 3. Typography & Images --- */
+h1 {
+    color: #00d2ff; /* Cyan Neon */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-weight: 300;
 }
 
 img, iframe {
     max-width: 100%;
     border-radius: 10px;
     margin: 20px 0;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Cyan glow */
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3); /* Soft cyan glow */
 }
 
-h1 {
-    color: #00d2ff; /* Cyan accent */
-    margin-bottom: 5px;
+#apod-explanation {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 0.95rem;
+    color: #ddd;
 }
 
 #apod-date {
@@ -36,16 +56,39 @@ h1 {
     margin-top: 0;
 }
 
-#apod-explanation {
-    line-height: 1.6;
-    text-align: justify;
+/* --- 4. Navigation Buttons --- */
+nav {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
 }
-/* Date Picker Styling */
+
+button {
+    background: transparent;
+    border: 1px solid #00d2ff;
+    color: #00d2ff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #00d2ff;
+    color: #0b0d17;
+    box-shadow: 0 0 10px #00d2ff;
+}
+
+/* --- 5. Date Picker Controls --- */
 .date-controls {
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* Wraps on mobile screens */
 }
 
 input[type="date"] {
@@ -58,8 +101,30 @@ input[type="date"] {
     outline: none;
 }
 
-/* Fix calendar icon color in Chrome/Edge */
+/* Fix calendar icon color for Chrome/Edge */
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
+}
+
+/* --- 6. Mars Rover Grid (Gallery) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff4500; /* Mars Red Glow */
 }
