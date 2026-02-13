@@ -105,8 +105,6 @@ function showSection(sectionId) {
     }
 }
 
-// ... existing code ...
-
 // 6. Random Date Generator
 function fetchRandomAPOD() {
     // NASA APOD started on June 16, 1995
