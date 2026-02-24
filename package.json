@@ -1,12 +1,18 @@
 {
   "name": "@engineermapatac/event-horizon-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight wrapper for NASA's APOD and Mars Rover APIs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nasa", "api", "space", "apod", "mars"],
+  "keywords": [
+    "nasa",
+    "api",
+    "space",
+    "apod",
+    "mars"
+  ],
   "author": "EngineerMapatac",
   "license": "MIT"
 }
