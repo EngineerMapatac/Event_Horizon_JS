@@ -68,7 +68,7 @@ document.getElementById('date-picker').max = today;
 // 4. Fetch Mars Photos (Unchanged)
 async function fetchMarsPhotos() {
     const gallery = document.getElementById('mars-gallery');
-    if (gallery.innerHTML.trim() !== "") return; 
+    if (gallery.children.length > 0) return; 
 
     gallery.innerHTML = '<p>Loading Mars data...</p>';
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${apiKey}`;
