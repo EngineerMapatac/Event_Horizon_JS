@@ -1,0 +1,21 @@
+{
+  "name": "event_horizon_js",
+  "version": "1.0.0",
+  "description": "**Cosmos Dashboard** is a front-end web application designed to bring the universe closer to Earth. Leveraging the **NASA Open APIs**, this project dynamically fetches and renders astronomical data in a clean, interactive user interface.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EngineerMapatac/Event_Horizon_JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EngineerMapatac/Event_Horizon_JS/issues"
+  },
+  "homepage": "https://github.com/EngineerMapatac/Event_Horizon_JS#readme"
+}
