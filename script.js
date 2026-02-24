@@ -65,47 +65,8 @@ function fetchAPODByDate() {
 const today = new Date().toISOString().split('T')[0];
 document.getElementById('date-picker').max = today;
 
-// 4. Fetch Mars Photos (Unchanged)
-async function fetchMarsPhotos() {
-    const gallery = document.getElementById('mars-gallery');
-    if (gallery.children.length > 0) return; 
 
-    gallery.innerHTML = '<p>Loading Mars data...</p>';
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${apiKey}`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const photos = data.photos.slice(0, 12); 
-
-        gallery.innerHTML = ''; 
-
-        photos.forEach(photo => {
-            const img = document.createElement('img');
-            img.src = photo.img_src;
-            img.alt = `Mars Photo ID: ${photo.id}`;
-            img.title = photo.camera.full_name; 
-            gallery.appendChild(img);
-        });
-    } catch (error) {
-        gallery.innerHTML = '<p>Error loading Mars photos.</p>';
-    }
-}
-
-// 5. Toggle Sections (Unchanged)
-function showSection(sectionId) {
-    document.getElementById('apod-section').style.display = 'none';
-    document.getElementById('mars-section').style.display = 'none';
-
-    if (sectionId === 'apod') {
-        document.getElementById('apod-section').style.display = 'block';
-    } else {
-        document.getElementById('mars-section').style.display = 'block';
-        fetchMarsPhotos(); 
-    }
-}
-
-// 6. Random Date Generator
+// 4. Random Date Generator
 function fetchRandomAPOD() {
     // NASA APOD started on June 16, 1995
     const startDate = new Date('1995-06-16').getTime();
